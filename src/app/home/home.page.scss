@@ -1,4 +1,409 @@
+@font-face{
+  font-family: Century Golthic;
+  src : url("../../assets/fonts/GOTHIC.TTF");
+}
+
+.container{
+    padding:0;
+    margin: 20px;
+    background-image: linear-gradient(to bottom,yellow,blue);
+}
+.col{
+    max-width: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.col-hover{
+    width: auto;
+    max-width: none;
+    flex: 0 0 auto;
+}
+.search{
+    padding-top: 20px;
+    margin: 0px 10px;
+    display:flex;
+}
+    .search-box{
+        height:45px;
+            }
+        .set-right{
+            display:flex;
+            font-size:25px;
+            margin:auto;
+        }
+            .item-set{
+                margin : auto;
+                text-align:center;
+            }
+.profile{
+    display:flex;
+    margin: 10px;
+    padding:10px 20px;
+
+}
+    .name{
+        text-transform:uppercase;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Montserrat', "Helvetica", Arial, sans-serif;
+    }
+
+    .avatar {
+        vertical-align: middle;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin:auto;
+    }
+    .lable-profile h5{
+        font-family: Poppins-Bold;
+        margin:auto;
+        text-align:center;
+        padding-top:15px;
+        padding-left:7px;
+    }
+    .circular--landscape {
+        display: inline-block;
+        position: relative;
+        margin :auto;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+        .circular--landscape img {
+            width: auto;
+            height: 100%;
+            margin-left: -50px;
+        }
+
+.menu{
+    color: #757575;
+}
+
+.lable-profile p{
+    font-family: Poppins-Thin;
+    margin:5px;
+    text-align:center;
+    color:#DEDEDE
+}
+.ion-icon-grid{
+    font-size:80px
+}
+        .button-vote{
+            margin:10px;
+            margin-top:40px;
+        }
+        .button{
+            margin:10px;
+        }
+.lable-profile{
+    margin: auto ;
+    text-align: center;
+}
+.custom-popover .popover-content {
+  width: 80%;
+  top: 70px;
+  left: 30px;
+  bottom: 70px
+}
+
+//Card Visa
+
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
+
+*{
+  box-sizing:border-box;
+  font-family: 'Space Mono', monospace;
+}
+
+body, html{
+  margin:0;
+  padding:0;
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+   background-image: linear-gradient(to right top, #a2beeb, #8ecfee, #8edde5, #a4e7d5, #c7eec7);
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.title {
+    margin-bottom: 30px;
+    color: #162969;
+}
+
+
+.card{
+box-shadow: 4px 7px 9px -8px rgba(0,0,0,0.75);
+width: 320px;
+height: 190px;
+-webkit-perspective: 600px;
+-moz-perspective: 600px;
+perspective:600px;
+margin:auto;
+  
+}
+
+.card__part{
+  box-shadow: 1px 1px #aaa3a3;
+    top: 0;
+  position: absolute;
+z-index: 1000;
+  left: 0;
+  display: inline-block;
+    width: 320px;
+    height: 190px;
+    background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(to right bottom, #F6AA18,#0083B0); /*linear-gradient(to right bottom, #fd8369, #fc7870, #f96e78, #f56581, #ee5d8a)*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+   
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.card__front{
+  padding: 18px;
+-webkit-transform: rotateY(0);
+-moz-transform: rotateY(0);
+}
+
+.card__back {
+  padding: 18px 0;
+-webkit-transform: rotateY(-180deg);
+-moz-transform: rotateY(-180deg);
+}
+
+.card__black-line {
+    margin-top: 5px;
+    height: 38px;
+    background-color: #303030;
+}
+
+.card__logo {
+    height: 16px;
+}
+
+.card__front-logo{
+      position: absolute;
+    top: 18px;
+    right: 18px;
+}
+.card__square {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.card_numer {
+    display: block;
+    width: 100%;
+    word-spacing: 4px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card__space-75 {
+    width: 75%;
+    float: left;
+}
+
+.card__space-25 {
+    width: 25%;
+    float: left;
+}
+
+.card__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 1px;
+}
+
+.card__info {
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card__back-content {
+    padding: 15px 15px 0;
+}
+.card__secret--last {
+    color: #303030;
+    text-align: right;
+    margin: 0;
+    font-size: 14px;
+}
+
+.card__secret {
+    padding: 5px 12px;
+    background-color: #fff;
+    position:relative;
+}
+
+.card__secret:before{
+  content:'';
+  position: absolute;
+top: -3px;
+left: -3px;
+height: calc(100% + 6px);
+width: calc(100% - 42px);
+border-radius: 4px;
+  background: repeating-linear-gradient(45deg, #ededed, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
+}
+
+.card__back-logo {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.card__back-square {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.card-container{
+  box-shadow: 0px 10px 16px -8px rgba(0,0,0,0.5);
+  background-color: #fff;
+  padding: 20px;
+  margin:auto;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  display: flex!important;
+  align-content: center!important;
+  align-items: center!important;
+}
+.circle{
+    height :50px;
+    width: 50px;
+    border-radius: 50%;
+    margin:auto;
+    padding:5px;
+    padding-bottom:none;
+}
+        .pink{
+            background-color:#F69A9D;
+        }
+        .ungu{
+            background-color:#A0A2C9;
+        }
+        .biru{
+            background-color:#B8E5F8;
+        }
+        .orange{
+            background-color:#FECBBA;
+        }
+    .caption{
+        margin: auto;
+    }
+        .caption-icon{
+            text-align: center;
+            margin: 5px;
+            font-size: 30px;
+            line-height: 1;
+        }
+.notifications{
+    padding : 5px;
+}
+
+//Slider
 .welcome-card img {
   max-height: 35vh;
   overflow: hidden;
+}
+.title{
+  margin-left: 11px;
+  font-family: Century Golthic;
+}
+.custon-nav{
+    height: 48px;
+    width: 20px;
+    cursor: pointer;
+ 
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+// .prev-icon-custom{
+//     background: url(../../assets/images/carousal-icon.png) no-repeat scroll 0px 0px;
+// }
+.prev-icon-custom.disabled{
+    opacity: 0.4;
+    cursor: default;
+}
+// .next-icon-custom{
+//     background: url(../../assets/images/carousal-icon.png) no-repeat scroll -32px 0px;
+// }
+.next-icon-custom.disabled{
+    opacity: 0.4;
+    cursor: default;
+}
+.slider-nav{
+    ion-icon{
+        height: 100%;
+    }
+}
+.text {
+font-family : Century Golthic;
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 20px;
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  text-align: left;
+  // left:-26%;
+} 
+.Rp{
+font-family: Century Golthic ;
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 20px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  // left: -22% ;
+  text-align: left;
+}
+.slide-data{
+    position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease,-webkit-transform .6s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    padding-left : 2%;
+    padding-right : 2%;
 }

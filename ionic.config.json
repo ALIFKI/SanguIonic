@@ -1,5 +1,8 @@
 {
   "name": "SanguApp",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "b0f58bac"
 }

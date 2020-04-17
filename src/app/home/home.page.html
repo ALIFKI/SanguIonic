@@ -1,44 +1,110 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header no-border>
+  <ion-toolbar style="border-width: 0px;">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button class="menu"></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      E-Paimen
     </ion-title>
+      <ion-buttons slot="end" class="">
+        <ion-icon slot="start" name="notifications" class="animated infinite rubberBand delay-1s"></ion-icon>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+<ion-content color="medium" class="ion-no-padding">
+  
+      <div class="card-container" center>
+              <div class="card">
+                <div class="card__front card__part">
+                  <img class="card__front-square card__square" src="../../assets/img/little_square.png">
+                  <img class="card__front-logo card__logo"
+                    src="../../assets/img/Visa.png">
+                  <p class="card_numer">1122 3323 3223 6258</p>
+                  <div class="card__space-75">
+                    <span class="card__label">Card holder</span>
+                    <p class="card__info">ALIFKI</p>
+                  </div>
+                  <div class="card__space-25">
+                    <span class="card__label">Expires</span>
+                    <p class="card__info">10/25</p>
+                  </div>
+                </div>
+              
+                <div class="card__back card__part">
+                  <div class="card__black-line"></div>
+                  <div class="card__back-content">
+                    <div class="card__secret">
+                      <p class="card__secret--last">420</p>
+                    </div>
+                    <img class="card__back-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
+                    <img class="card__back-logo card__logo"
+                      src="https://www.fireeye.com/partners/strategic-technology-partners/visa-fireeye-cyber-watch-program/_jcr_content/content-par/grid_20_80_full/grid-20-left/image.img.png/1505254557388.png">
+              
+                  </div>
+                </div>
+              </div>
+      </div>
+      <ion-grid fixed class="no-padding">
+        <ion-card style="background:white;padding-top: 8px">
+        <ion-row>
+          <ion-col size="3" (click)="presentAlertPrompt()" >
+            <div class="circle biru">
+              <ion-icon slot="start" name="ios-cloud-upload" class="caption-icon"></ion-icon>
+            </div>
+            <p style="text-align: center" class="caption">Top Up</p>
+          </ion-col>
+          <ion-col size="3" (click)="buy()" >
+            <div class="circle pink">
+              <ion-icon slot="start" name="phone-portrait" class="caption-icon"></ion-icon>
+            </div>
+            <p style="text-align: center" class="caption">Beli</p>
+          </ion-col>
+          <ion-col size="3" (click)="scanCode()" >
+            <div class="circle orange">
+              <ion-icon slot="start" name="qr-scanner" class="caption-icon"></ion-icon>
+            </div>
+            <p style="text-align: center" class="caption">Scan</p>
+          </ion-col>
+          <ion-col size="3">
+            <div class="circle ungu">
+              <ion-icon slot="start" name="more" class="caption-icon"></ion-icon>
+            </div>
+            <p style="text-align: center" class="caption">More</p>
+          </ion-col>
+        </ion-row>
+        </ion-card>
+  <ion-row class="ion-no-padding ion-justify-content-center">
+        <ion-col size="11" class="ion-justify-content-center" class="ion-no-padding">
+          <ion-slides pager="true" [options]="slideOptsOne" #slideWithNav class="slide-container"
+            (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+            <ion-slide *ngFor="let s of sliderOne.slidesItems" class="slide">
+              <div class="slide-data">
+                <img src="../../assets/img/{{s.id}}.jpg" style="width: 100% ;display: block!important;vertical-align: middle;
+            border-style: none;border-radius: 14px;">
+              </div>
+              <div class="shadow-img"></div>
+              <div class="text">Caption Two {{s.id}}</div>
+              <div class="Rp">Rp.500.000,00</div>
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-card style="background:white;">
+              <ion-card-header>
+                <ion-card-subtitle>History</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-list>
+                  <!-- <ion-item *ngFor="let item of data"  >
+                              <ion-label>{{item.title}}</ion-label>
+                            </ion-item> -->
+                </ion-list>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 </ion-content>
