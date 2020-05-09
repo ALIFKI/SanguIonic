@@ -6,4 +6,5 @@ Sangu Mobile Development
 -npm install && ionic state reset.<br>
 -cordova platform add android.<br>
 -ionic resources.<br>
--ionic run android.
+-ionic run android.<br>
+-ionic serve
