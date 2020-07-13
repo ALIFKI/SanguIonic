@@ -1,7 +1,7 @@
 # SanguIonic
-Sangu Mobile Development
+Sangu frontend app for Mobile
 
-# Cara Install Setelah Clone Project 
+# How to install after clone
 
 -npm install && ionic state reset.<br>
 -cordova platform add android.<br>
